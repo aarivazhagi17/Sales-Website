@@ -10,7 +10,7 @@ function ProductCard({ item }) {
     <div className='cart-item'>
         <img src={item.image} alt={item.name} />
       <h3 className='product'>{item.name}</h3>
-      <p className='rate' style={{fontWeight:"bold"}}>Price: ${item.price.toFixed(2)}</p>
+      <p className='rate' style={{fontWeight:"bold"}}>Price: ${item.price}</p>
       <button className='buton' onClick={() => addItem(item)}>Add to cart</button>
     </div>
     </>

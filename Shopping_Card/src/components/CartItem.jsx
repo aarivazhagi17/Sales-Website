@@ -11,7 +11,7 @@ function CartItem({ item }) {
         <img style={{height:"100px", width:"100px"}} src={item.image} alt="" />
       </div> <br /> <br />
       <div>
-        ${item.price.toFixed(2)}
+        ${item.price}
       </div> <br /> <br />
       <div>
         Qty: {item.quantity}
@@ -20,7 +20,7 @@ function CartItem({ item }) {
       <button onClick={() => decrementItem(item.id)}>-</button>
       <button onClick={() => removeItem(item.id)}>Remove</button> <br /> <br /> <br />
       <div>
-        Subtotal: ${(item.price * item.quantity).toFixed(2)}
+        Subtotal: ${(item.price)}
       </div>
     </div>
   );

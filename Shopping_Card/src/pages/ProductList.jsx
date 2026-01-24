@@ -18,18 +18,18 @@ import '../components/Product.css';
 
 // dummy product data
 const PRODUCTS = [
-  { id: 1, name: "Iphone15", price: 16.777, image: Iphone15},
-    { id: 2, name: "Acer", price: 39.990, image: Acer},
-    { id: 3, name: "Ovemb", price: 347 , image: Ovemb},
-    { id: 4, name: "Nikon", price: 65.999 ,image: Nikon},
-    { id: 5, name: "OnePlus11", price: 44.999 ,image: OnePlus11},
-    { id: 6, name: "Goboult", price: 859 ,image: Goboult},
-    { id: 7, name: "hp", price: 26.809 ,image: hp},
-    { id: 8, name: "Sonatta", price: 2.795 ,image: Sonatta},
-    { id: 9, name: "PocoM3", price: 13.999 ,image: PocoM3},
-    { id: 10, name: "Zhiyun", price: 53.999 ,image: Zhiyun},
-    { id: 11, name: "OnePlus", price: 1.499 ,image: OnePlus},
-    { id: 12, name: "Lenovo", price: 32.999 ,image: Lenovo},
+  { id: 1, name: "Iphone15", price: "16777"  , image: Iphone15},
+    { id: 2, name: "Acer", price: "39999"  , image: Acer},
+    { id: 3, name: "Ovemb", price: "347" , image: Ovemb},
+    { id: 4, name: "Nikon", price: "65999" ,image: Nikon},
+    { id: 5, name: "OnePlus11", price: "44999" ,image: OnePlus11},
+    { id: 6, name: "Goboult", price: "859" ,image: Goboult},
+    { id: 7, name: "hp", price: "26809" ,image: hp},
+    { id: 8, name: "Sonatta", price: "2795" ,image: Sonatta},
+    { id: 9, name: "PocoM3", price: "13999" ,image: PocoM3},
+    { id: 10, name: "Zhiyun", price: "53999" ,image: Zhiyun},
+    { id: 11, name: "OnePlus", price: "1499" ,image: OnePlus},
+    { id: 12, name: "Lenovo", price: "32999" ,image: Lenovo},
 ];
 
 function ProductList() {
