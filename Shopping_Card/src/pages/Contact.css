@@ -1,0 +1,92 @@
+.Bg{
+    background-image: url(../assets/Items/BacImage1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 400px;   
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin-top: 50px;
+}
+.text{
+    color: rgb(84, 213, 245);
+    font-size: 30px;
+    font-weight: 700;
+}
+.underline{
+    width: 61px;
+    height: 6px;
+    background-color: rgb(248, 240, 240);
+    border-radius: 9px;
+} 
+.inputs{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.input{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(242, 229, 229);
+    border-radius: 6px;
+}
+.input img{
+    margin: 0 30px;
+}
+.input input{
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: rgb(10, 9, 9);
+    
+}
+.forgot-password{
+    padding-left: 100px;
+    margin-top:26px ;
+    color: rgb(248, 244, 244);
+    font-size: 18px;
+}
+.forgot-password span{
+    color: blue;
+    cursor: pointer;
+}
+.submit-container{
+    display: flex;
+    gap: 30px;
+    margin: 60px auto;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 50px;
+    color:#fff;
+background: blueviolet;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.gray{
+    background: rgb(245, 242, 242);
+    color: rgb(16, 16, 16);
+    font-weight: 700;
+}
