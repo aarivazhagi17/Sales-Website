@@ -1,43 +1,79 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './Contact.css'
-import User_icon from '../assets/LoginLogo/User_icon.png'
-import Email_icon from '../assets/LoginLogo/Email_icon.png'
-import Password_icon from '../assets/LoginLogo/Password_icon.png'
-function Contact() {
-  const[action, setAction]=useState("Login");
+
+export default function Contact() {
+  const [isLogin, setIsLogin] = useState(true);
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!form.email || !form.password || (!isLogin && !form.name)) {
+      alert("Please fill all required fields!");
+      return;
+    }
+
+    alert(isLogin ? "Login Successful!" : "Registration Successful!");
+
+    setForm({ name: "", email: "", password: "" });
+  };
 
   return (
-    <div className='Bg'>
-     <div className="container">
-            <div className="header">
-                <div className="text">{action}</div>
-                <div className="underline"></div>
-            </div>
-            <div className="inputs">
-              {action==="Login"?<div></div>:<div className="input">
-                    <img src={User_icon} alt="" />
-                    <input type="text" placeholder='Name'/>
-                </div>}
-                
-                <div className="input">
-                    <img src={Email_icon} alt="" />
-                    <input type="email" placeholder='Email Id' />
-                </div>
-                <div className="input">
-                    <img src={Password_icon} alt="" />
-                    <input type="password" text="password" placeholder='Password' />
-                </div>
-                </div>
-                {action==="Sign Up"?<div></div>: <div className="forgot-password">Lost Password ? <span>Click Here!</span></div>}
-                
-                <div className="submit-container">
-                  <div className={action==="Login"?"submit gray":"submit"} onClick={()=>{setAction("Sign Up")}}>Sign Up</div>
-                  <div className={action==="Sign Up"?"submit gray":"submit"} onClick={()=>{setAction("Login")}}>Login</div>
-                </div>
-            </div>
-    </div>
-    
-  )
-}
+    <div className="auth-container">
+      <div className="auth-card">
+        <h2 className="auth-title">{isLogin ? "Login" : "Register"}</h2>
 
-export default Contact
+        <form className="auth-form" onSubmit={handleSubmit}>
+          {!isLogin && (
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              value={form.name}
+              onChange={handleChange}
+              className="auth-input"
+            />
+          )}
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={form.email}
+            onChange={handleChange}
+            className="auth-input"
+          />
+
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={form.password}
+            onChange={handleChange}
+            className="auth-input"
+          />
+
+          <button className="auth-button" type="submit">
+            {isLogin ? "Login" : "Register"}
+          </button>
+        </form>
+
+        <p className="auth-switch">
+          {isLogin ? "Don't have an account?" : "Already have an account?"}
+          <span onClick={() => setIsLogin(!isLogin)} className="auth-link">
+            {isLogin ? " Register" : " Login"}
+          </span>
+        </p>
+      </div>
+    </div>
+  );
+}
