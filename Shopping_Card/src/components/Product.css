@@ -1,5 +1,6 @@
 .cart-item {
     border:2px solid;
+    width: 70%;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 2px 1px 4px rgb(18, 17, 17);
@@ -9,7 +10,7 @@
 .cart-item img {
     width: 100%;
     border-radius: 10px;
-    height: 370px;
+    height: 230px;
 }
 
 .product{
@@ -40,4 +41,57 @@
 .buton:active{
     background-color: rgb(244, 237, 237);
     color: black;
+}
+
+.delivery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 20px;
+    box-shadow: 7px 4px 17px rgb(18, 17, 17);
+    margin-top: 80px;
+}
+.delivery_boy{
+    height: 500px;
+    width: 400px;
+    margin-left: 30px;
+}
+.delivery_items{
+    align-items: center;
+    font-size: 28px;
+    margin-top: 50px;
+}
+@media screen and (max-width:767px) {
+    .delivery{
+        grid-template-columns: 1fr;
+    }
+    .delivery_items{
+       text-align: center;
+    }
+    
+}
+.WhiteMan{
+    height: 430px;
+    margin-top: 30px;
+}
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 7px 4px 17px rgb(18, 17, 17);
+    margin-top: 80px;
+}
+@media screen and (max-width:767px) {
+    .contact{
+        grid-template-columns: 1fr;
+    }
+}
+.contact h2{
+    color: rgb(8, 8, 143);
+    letter-spacing: 1px;
+
+}
+.Location{
+    height: 150px;
+    
 }
